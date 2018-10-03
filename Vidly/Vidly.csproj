@@ -259,7 +259,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\Customers\IndexCustomerViewModel.cs" />
+    <Compile Include="ViewModels\Customers\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\Movies\IndexMovieViewModel.cs" />
+    <Compile Include="ViewModels\Movies\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\Movies\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -328,6 +330,8 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

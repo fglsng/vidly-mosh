@@ -76,3 +76,6 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+/Vidly/App_Data
+/.vs/Vidly/v15/Server/sqlite3
+/.vs/config
