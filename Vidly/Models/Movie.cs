@@ -10,18 +10,22 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
 
         public DateTime DateAdded { get; set; } = DateTime.Now;
 
+        [Range(1, 20)]
         [Display(Name = "Number in Stock")]
         public int Stock { get; set; }
 
         public GenreType GenreType { get; set; }
 
+        [Required]
         [Display(Name = "Genre")]
         public byte GenreTypeId { get; set; }
     }
