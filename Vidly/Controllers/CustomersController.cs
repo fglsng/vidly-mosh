@@ -9,11 +9,11 @@ using Vidly.ViewModels.Customers;
 
 namespace Vidly.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomersController : Controller
     {
         private ApplicationDbContext _context;
 
-        public CustomerController()
+        public CustomersController()
         {
             _context = new ApplicationDbContext();
         }
@@ -92,7 +92,7 @@ namespace Vidly.Controllers
             
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Customer");
+            return RedirectToAction("Index", "Customers");
         }
 
 
@@ -100,17 +100,10 @@ namespace Vidly.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-
-            var viewModel = new IndexCustomerViewModel
-            {
-                Customers = customers
-            };
-
-            return View(viewModel);
+            return View();
         }
 
-        [Route("customer/details/{id}")]
+        [Route("customers/details/{id}")]
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);

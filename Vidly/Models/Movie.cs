@@ -15,7 +15,7 @@ namespace Vidly.Models
 
         
         [Display(Name = "Release Date")]
-        public DateTime ReleaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; } = new DateTime(1980, 1, 1);
 
         public DateTime DateAdded { get; set; } = DateTime.Now;
 
