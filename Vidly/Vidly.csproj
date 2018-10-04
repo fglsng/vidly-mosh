@@ -270,6 +270,10 @@
     <Compile Include="Migrations\201810031432087_AnnotationsForMovie.Designer.cs">
       <DependentUpon>201810031432087_AnnotationsForMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810042049396_SeedUsers.cs" />
+    <Compile Include="Migrations\201810042049396_SeedUsers.Designer.cs">
+      <DependentUpon>201810042049396_SeedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -279,6 +283,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\Customers\IndexCustomerViewModel.cs" />
@@ -583,6 +588,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810031432087_AnnotationsForMovie.resx">
       <DependentUpon>201810031432087_AnnotationsForMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810042049396_SeedUsers.resx">
+      <DependentUpon>201810042049396_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

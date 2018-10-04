@@ -1,11 +1,18 @@
-﻿@model Vidly.ViewModels.Movies.IndexMovieViewModel
+﻿@using Vidly.Models
+@model Vidly.ViewModels.Movies.IndexMovieViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Movies</h2>
-@Html.ActionLink("New Movie", "new", new { }, new { @class="btn btn-primary" })
+
+@if (User.IsInRole(RoleName.CanManageMovies))
+{
+    @Html.ActionLink("New Movie", "new", new { }, new { @class = "btn btn-primary" })
+}
+
+
 <br /><br />
 @if (Model.Movies.Count == 0)
 {

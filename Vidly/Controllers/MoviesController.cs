@@ -18,6 +18,7 @@ namespace Vidly.Controllers
             _context = new ApplicationDbContext();
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genreTypes = _context.GenreTypes.ToList();
@@ -30,6 +31,7 @@ namespace Vidly.Controllers
 
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [Route("movies/edit/{id}")]
         public ActionResult Edit(int id)
         {
@@ -50,6 +52,7 @@ namespace Vidly.Controllers
 
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
